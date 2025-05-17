@@ -1,11 +1,17 @@
-package Controlleur;
-import Graphique.*;
-import Modele.*;
-import java.util.List;
+// src/Controlleur/ControleurFenetrePrincipale.java
+package src.Controlleur;
+
+import src.Modele.Magasin_Scooter;
+import src.Graphique.FenetrePrincipale;
+import src.Graphique.FenetreClients;
+import src.Graphique.FenetreLocations;
+import src.Graphique.FenetreRetours;
+import src.Graphique.FenetreScooters;
+import src.Controlleur.FenetreScootersController;
 
 public class ControleurFenetrePrincipale {
     private final FenetrePrincipale vue;
-    public Magasin_Scooter monMagasin;
+    private final Magasin_Scooter monMagasin;
 
     public ControleurFenetrePrincipale(FenetrePrincipale vue, Magasin_Scooter monMagasin) {
         this.vue = vue;
@@ -18,7 +24,11 @@ public class ControleurFenetrePrincipale {
     }
 
     public void showScooters() {
-        new FenetreScooters(vue, monMagasin).setVisible(true);
+        // Création du contrôleur et de la vue dans le bon ordre
+        FenetreScootersController controller = new FenetreScootersController(monMagasin);
+        FenetreScooters fenetreScooters = new FenetreScooters(controller);
+        controller.initView();              // remplit la liste au lancement
+        fenetreScooters.setVisible(true);
         vue.dispose();
     }
 

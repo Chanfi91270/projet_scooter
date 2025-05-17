@@ -1,7 +1,7 @@
-package Graphique;
+package src.Graphique;
 
-import Controlleur.ControleurFenetrePrincipale;
-import Modele.*;
+import src.Modele.*;
+import src.Controlleur.*;
 
 import javax.swing.*;
 import java.awt.*;

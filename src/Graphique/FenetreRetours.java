@@ -1,4 +1,4 @@
-package Graphique;
+package src.Graphique;
 import javax.swing.*;
 import java.awt.*;
 

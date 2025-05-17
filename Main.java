@@ -1,6 +1,6 @@
-import Modele.*;
-import Graphique.*;
-import Controlleur.*;
+import src.Graphique.FenetrePrincipale;
+import src.Modele.*;
+import src.Controlleur.*;
 
 import javax.swing.*;
 import java.util.*;

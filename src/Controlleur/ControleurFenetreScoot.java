@@ -1,15 +1,12 @@
-package Controlleur;
-
-import java.util.Vector;
+package src.Controlleur;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import Graphique.FenetreScooters;
-import Modele.*;
+import src.Modele.*;
+import src.Graphique.*;
 
 public class ControleurFenetreScoot {
 private JTextField champID;
@@ -24,5 +21,5 @@ private FenetreScooters fenetre;
 
 
 
-public ControleurFenetreScoot(){}
+public ControleurFenetreScoot(FenetrePrincipale vue, Magasin_Scooter monMagasin){}
 }
